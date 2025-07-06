@@ -1,0 +1,13 @@
+-r requirements.txt
+
+# Linting y formato
+black==24.3.0
+flake8==7.0.0
+isort==5.13.2
+
+# Tipado estático
+mypy==1.10.0
+
+# Seguridad opcional
+bandit==1.7.7
+requests>=2.31.0

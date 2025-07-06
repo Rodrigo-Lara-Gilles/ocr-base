@@ -1,0 +1,17 @@
+services:
+  ocr:
+    container_name: ocr-backend
+    build: .
+    volumes:
+      - .:/app
+      - "${HOST_DESKTOP}:/host/Desktop"
+      - "${HOST_DOWNLOADS}:/root/Downloads"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    networks:
+      - ocr-net
+
+networks:
+  ocr-net:
+    driver: bridge
